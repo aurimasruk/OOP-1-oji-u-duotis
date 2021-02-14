@@ -1,30 +1,30 @@
 #include <iostream>
-
 using namespace std;
 
-int isvedimas(int l, string name, string mystr){
-	for(int i = -2; i < l; i++)	cout << "*"; cout << endl << "*";
+void output(string mystr){
 
-	for(int i = 0; i < l; i++)	cout << " "; cout << "*" << endl;
-	
-	cout << "* " << mystr << name << " *" << endl << "*";
-	
-	for(int i = 0; i < l; i++)	cout << " "; cout << "*" << endl;
+	int l = mystr.length();
+	string x1("* "), x2(" *");
 
-	for(int i = -2; i < l; i++)	cout << "*";
+	string l1(x1.length() + l + x2.length(), '*');
+	string l2(x1 + string(l, ' ') + x2);
+	string l3(x1 + mystr + x2);
+	string l4(l2);
+	string l5(l1);
+
+	cout << l1 << endl;
+	cout << l2 << endl;
+	cout << l3 << endl;
+	cout << l4 << endl;
+	cout << l5 << endl;
 }
 
 int main(){
-
-	int l;
-	string name, mystr = "Sveikas, ";
-
+	string name;
 	cout << "Enter your name: ";
 	cin >> name;
+	string mystr = "Sveikas, " + name + "!";
 
-	l = mystr.length() + name.length() + 2;
+	output(mystr);
 
-	isvedimas(l, name, mystr);
-
-	return 0;
-}
+	return 0;	}
