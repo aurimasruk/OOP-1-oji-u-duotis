@@ -1,10 +1,19 @@
 #include <iostream>
 using namespace std;
 
-void output(string mystr){
+bool gender(string name){
+	if(name.back() == 's') return 1;
+	else return 0;
+}
+
+void output(string name){
+
+	string x1("* "), x2(" *"), mystr;
+
+	if(gender(name)) mystr = "Sveikas, " + name + "!";
+	else mystr = "Sveika, " + name + "!";
 
 	int l = mystr.length();
-	string x1("* "), x2(" *");
 
 	string l1(x1.length() + l + x2.length(), '*');
 	string l2(x1 + string(l, ' ') + x2);
@@ -20,11 +29,11 @@ void output(string mystr){
 }
 
 int main(){
+
 	string name;
 	cout << "Enter your name: ";
 	cin >> name;
-	string mystr = "Sveikas, " + name + "!";
 
-	output(mystr);
+	output(name);
 
 	return 0;	}
