@@ -6,34 +6,47 @@ bool gender(string name){
 	else return 0;
 }
 
-void output(string name){
+void output(string name, int fsize){
 
-	string x1("* "), x2(" *"), mystr;
+	string x1("*"), x2(" "), mystr;
 
 	if(gender(name)) mystr = "Sveikas, " + name + "!";
 	else mystr = "Sveika, " + name + "!";
 
+	if (fsize == 0) cout << mystr << endl;
+
+	else{
 	int l = mystr.length();
+	int rows = fsize * 2 + 1;
+	int columns = fsize * 2 + l;
 
-	string l1(x1.length() + l + x2.length(), '*');
-	string l2(x1 + string(l, ' ') + x2);
-	string l3(x1 + mystr + x2);
-	string l4(l2);
-	string l5(l1);
-
-	cout << l1 << endl;
-	cout << l2 << endl;
-	cout << l3 << endl;
-	cout << l4 << endl;
-	cout << l5 << endl;
-}
+	for(int i = 0; i < rows; i++){
+		for(int j = 0; j < columns; j++){
+			if(fsize == i and fsize == j) {cout << mystr;
+			j = j + l - 1;	}
+			else{
+				if(i == 0 or j == 0 or i == rows - 1 or j == columns - 1) cout << x1;
+				else cout << x2;
+			}
+		}
+		cout << endl;
+	}
+}}
 
 int main(){
-
+	int fsize;							// frame size
 	string name;
 	cout << "Enter your name: ";
 	cin >> name;
 
-	output(name);
+	cout << "Enter your frame size: ";
+	cin >> fsize;
+
+	while(fsize < 0 or fsize > 15){
+	cout << "Change your frame size (0-15): ";
+	cin >> fsize;}
+
+	cout << endl;
+	output(name, fsize);
 
 	return 0;	}
