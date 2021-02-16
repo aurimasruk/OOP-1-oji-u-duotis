@@ -12,6 +12,6 @@ Programa nuskaito vartotojo įvedamą vardą ir atspausdina įrėmintą pasisvei
 
 ## Releases ##
 
-* [v1.0](https://github.com/aurimasruk/OOP-1st-Task/releases/tag/v1.0) Programa vartotojui leidŽia koreguoti rėmelio dydį.
+* [v1.0](https://github.com/aurimasruk/OOP-1st-Task/releases/tag/v1.0) Programa vartotojui leidžia koreguoti rėmelio dydį.
 * [v0.2](https://github.com/aurimasruk/OOP-1st-Task/releases/tag/v0.2) Programa atspausdina pasisveikinimą atsižvelgdama į vartotojo lytį atitinkamai pakeisdama tarp _"Sveikas"_ ir _"Sveika"_.
 * [v0.1](https://github.com/aurimasruk/OOP-1st-Task/releases/tag/v0.1) Programa atspausdina pasisveikinimą su rėmeliu.
