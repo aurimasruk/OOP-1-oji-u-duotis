@@ -12,4 +12,5 @@ Programa nuskaito vartotojo įvedamą vardą ir atspausdina įrėmintą pasisvei
 
 ## Releases ##
 
+* [v0.2](https://github.com/aurimasruk/OOP-1st-Task/releases/tag/v0.2) Programa atspausdina pasisveikinimą atsižvelgdama į vartotojo lytį atitinkamai pakeisdama tarp _"Sveikas"_ ir _"Sveika"_.
 * [v0.1](https://github.com/aurimasruk/OOP-1st-Task/releases/tag/v0.1) Programa atspausdina pasisveikinimą su rėmeliu.
